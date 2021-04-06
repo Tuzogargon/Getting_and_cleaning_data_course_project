@@ -21,3 +21,12 @@ You should create one R script called run_analysis.R that does the following:
 <br/>
 **Overview of the analysis:**
 <br/>
+1.- The data files are read without modifications on the structure or names, for both train and test.  
+  2.- Merge data into one data frame, first by rows for each of the files of train and test, then by columns.  
+  3.- Extract measurements for mean and standard deviation  
+  4. Use descriptive names to name the activities  
+  5. Label the data data set with descriptive names  
+  6. Create a second independent data set with the name of "tidy_observations_summary.txt"     
+<br/>
+<br/>
+ 
