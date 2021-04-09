@@ -1,0 +1,49 @@
+---
+title: "Codebook"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Variables
+
+The tidy data set contains 180 obs and 68 variables, its saved in text and csv file formats.  
+
+### Variable list
+* subject: ID of the subject tested (1:30)  
+* activity: Activity name (WALKING, SITTING, LAYING…)  
+
+The rest of the variables are a combination of features:  
+
+
+* Domain: Time or Frequency  
+* Instrument: Accelerometer or Gyroscope  
+* Acceleration: Body or Gravity  
+* Magnitude  
+* Jerk  
+* Axis: X, Y or Z direction  
+* Statistical measurement: Mean or Standard Deviatio (STD)  
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(knitr)
+res <- as_tibble(read.table("tidy_observations_summary.txt",header=TRUE))
+kable(colnames(res), caption = "Observation variables",col.names = "Variable")
+
+```
+
+### Summaries calculation
+
+Data is grouped and summarized by the average of each variable for each activity and each subject  
+
+A 10 x 5 example is shown below  
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(knitr)
+res <- as_tibble(read.table("tidy_observations_summary.txt",header=TRUE))
+res[1:10,1:5]
+```
+
