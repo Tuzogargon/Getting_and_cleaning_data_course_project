@@ -1,7 +1,6 @@
 ## Variables
 
-The tidy data set contains 180 obs and 68 variables, its saved in text
-and csv file formats.
+The tidy data set contains 180 obs and 68 variables, its saved in txt file format.
 
 ### Variable list
 
